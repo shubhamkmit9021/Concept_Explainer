@@ -1,0 +1,19 @@
+
+<html>
+    <head>
+       <title>Getters in JavaScript</title>
+    </head>
+    <body style="text-align: center;">
+       <p>Getters in JavaScript</p>
+       <p id="result"></p>
+       <script>
+          const student = {
+             student1 : ['Ram', 'Computer Science', 022],
+             get details() {
+                return this.student1[0]+' has registered for the course '+this.student1[1]+' with the roll no. '+this.student1[this.student1.length-1];
+             }
+          }
+          document.getElementById("result").innerHTML = student.details;
+       </script>
+    </body>
+</html>

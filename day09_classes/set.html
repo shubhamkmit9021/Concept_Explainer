@@ -1,0 +1,31 @@
+<html>
+<head>
+   <title>Setters in JavaScript</title>
+</head>
+<body style="text-align: center;">
+   <p>Setters in JavaScript</p>
+   <p id="text1"></p>
+   <script type="text/javascript">
+      var Employee = {
+         Name: "Rahul",
+         desg : 'Software Engineer',
+         Company : "Google",
+         set setName(Name) {
+            this.Name = Name;
+         },
+         set setDesignation(desg) {
+            this.Designation = desg;
+         },
+         get getname() {
+            return this.Name;
+         },
+         get getDesignation() {
+            return this.desg;
+         }
+      };
+      Employee.setName = 'Mohan';
+      Employee.setDesignation = 'Web Developer';
+      document.getElementById("text1").innerHTML ='The Employee details are as follows : ' + '<br/>' +'Employee Name : ' + Employee.getname + '<br/>' + 'Designation : ' + Employee.getDesignation; + '<br/>';
+   </script>
+</body>
+</html>
