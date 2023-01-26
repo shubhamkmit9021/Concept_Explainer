@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation</title>
+    <style>
+        #box {
+            border: 1px solid black;
+            padding: 20px;
+            width: max-content;
+            margin: auto;
+        }
+        button {
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="box">
+        <button id="btn1">Click Me1</button>
+        <button id="btn2">Click Me2</button>
+    </div> -->
+
+    <div>
+        <span>
+          <button>Click Me!</button>
+        </span>
+      </div>
+</body>
+</html>
+
+<script>
+
+    // document.querySelector("#btn1").addEventListener("click", btn1Fun);
+    // function btn1Fun() {
+    //     alert('btn1 pressed');
+    // }
+
+    // document.querySelector("#btn2").addEventListener("click", btn2Fun);
+    // function btn2Fun() {
+    //     alert("btn2 pressed")
+    // }
+
+    const div = document.getElementsByTagName("div")[0]
+
+div.addEventListener("click", (event) => {
+  if(event.target.tagName === 'BUTTON') {
+    console.log("button was clicked")
+  }
+})
+</script>
